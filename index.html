@@ -1,66 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio | José Manuel Dorantes Méndez</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MANU</title> 
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <h1>José Manuel Dorantes Méndez</h1>
-    <p>Desarrollador Web Junior</p>
+  <!-- ======= NAVBAR ======= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <!-- Cambia el texto o pon tu logo aquí -->
+        <a href="#home">MANU</a><img src="https://static.vecteezy.com/system/resources/previews/000/626/835/non_2x/green-leaf-logo-vector.jpg" alt="Logo" class="logo-img"/>
+      </div>
+      <nav id="nav-menu" class="nav-links">
+        <a href="#home">Inicio</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Servicios</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">Acerca de mí</a>
-    <a href="#projects">Proyectos</a>
-    <a href="#cv">CV</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contacto</a>
-  </nav>
-
-  <section id="about">
-    <h2>Acerca de mí</h2>
-    <p>Desarrollador en formación con experiencia en soporte técnico. Actualmente cursando un bootcamp Full Stack Java con enfoque en desarrollo web.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Portafolio</h2>
-    <div class="project">
-      <h3>FireStack eCommerce</h3>
-      <img src="images/logo_1.png" alt="FireStack eCommerce demo" width="300">
-      <p>Proyecto final colaborativo del bootcamp.</p>
-      <ul>
-        <li><strong>Rol:</strong> Frontend y pruebas</li>
-        <li><strong>Tecnologías:</strong> HTML, CSS, JS, Git</li>
-        <li><a href="https://github.com/ManuelinDora/E-commerce_Project_The_King_Tiger/tree/Branch_Test" target="_blank">Ver código</a></li>
-        <li><a href="https://tusitio.netlify.app" target="_blank">Ver en vivo</a></li>
-      </ul>
+  <!-- ======= INICIO / ACERCA DE MI ======= -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <img src="images/portada.jpeg" alt="Tu foto" class="hero-img"/>
+      <div>
+        <h1>Manuel Dorantes</h1>
+        <h2>Full Stack Web Developer</h2>
+        </p><!-- Escribe una breve descripción sobre ti. -->
+          Soy Técnico en Soporte con más de 9 años de experiencia resolviendo problemas reales para usuarios, siempre con un enfoque empático, ágil y orientado al cliente. Esta trayectoria me ha enseñado que la tecnología solo tiene valor cuando soluciona verdaderas necesidades.
+        </p>
+          Hoy, estoy en transición hacia el desarrollo web como Full Stack JavaScript Developer, con dominio de tecnologías como HTML, CSS, JavaScript y Node.js. Estoy capacitado para construir soluciones digitales de principio a fin, desde el diseño de interfaces hasta la lógica del servidor.
+        </p>
+        Combino mi habilidad técnica con una sólida experiencia en atención al detalle, comunicación efectiva y trabajo en equipo. Mi objetivo es crear herramientas útiles, accesibles y funcionales que realmente mejoren la experiencia del usuario.
+        </p>
+        <a href="#contact" class="btn-primary">Contáctame</a>
+      </div>
     </div>
   </section>
 
-  <section id="cv">
-    <h2>CV</h2>
-    <p>Resumen profesional. Puedes <a href="Mi_Portalio/Mi_CV.pdf" download>descargar mi CV aquí</a>.</p>
+  <!-- ======= PROYECTOS ======= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Proyectos</h2>
+      <div class="projects-grid">
+        <!-- Card de Proyecto - copia y pega para más proyectos -->
+        <div class="project-card">
+          <img src="images/proyecto_1.png" alt="Proyecto 1"/>
+          <h3>eCommerce</h3>
+          <p>Desarrollé desde cero una tienda en línea de ropa urbana llamada “The King Tiger”, utilizando tecnologías como HTML, CSS, JavaScript y MySQL.</p>
+          <a href="#" target="_blank" class="btn-secondary">Ver más</a>
+        </div>
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Proyecto 2"/>
+          <h3>Título del Proyecto</h3>
+          <p>Descripción breve del proyecto que puedes modificar.</p>
+          <a href="#" target="_blank" class="btn-secondary">Ver más</a>
+        </div>
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Proyecto 3"/>
+          <h3>Título del Proyecto</h3>
+          <p>Descripción breve del proyecto que puedes modificar.</p>
+          <a href="#" target="_blank" class="btn-secondary">Ver más</a>
+        </div>
+        <!-- Agrega más proyectos aquí -->
+      </div>
+    </div>
   </section>
 
-  <section id="blog">
-    <h2>Blog</h2>
-    <article>
-      <h3>Reflexión de mi camino como desarrollador Java</h3>
-      <p>Durante este proceso aprendí a resolver conflictos de equipo, usar Git y trabajar bajo presión en sprints. Mi meta a corto plazo es dominar Spring Boot y tener mi primer empleo como desarrollador.</p>
-    </article>
+  <!-- ======= SKILLS ======= -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <!-- Barra de Skill -->
+        <div class="skill">
+          <span>HTML/CSS</span>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width: 50%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width: 40%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>JAVA</span>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width: 30%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>GitHub</span>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width: 50%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>Phython</span>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width: 30%;"></div>
+          </div>
+        </div>
+        <!-- Agrega más skills aquí -->
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contacto</h2>
-    <p>Email: manuel.dorantes.m@gmail.com</p>
-    <p>LinkedIn: <a href="www.linkedin.com/in/manuel-dorantes-" target="_blank">Mi perfil</a></p>
+  <!-- ======= SERVICIOS ======= -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Servicios</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Diseño UI/UX</h3>
+          <p>Transformo ideas en interfaces digitales cautivadoras, priorizando la usabilidad y accesibilidad para ofrecer experiencias memorables en cualquier dispositivo.</p>
+        </div>
+        <div class="service-card">
+          <h3>Páginas Web</h3>
+          <p>Transformo ideas en sitios web poderosos que destacan tu marca y atraen a tu audiencia ideal con diseños funcionales e impactantes.</p>
+        </div>
+        <div class="service-card">
+          <h3>Integración con IA</h3>
+          <p>Incorporo inteligencia artificial en proyectos web, creando soluciones automatizadas que optimizan procesos y ofrecen experiencias más personalizadas a los usuarios.</p>
+        </div>
+        <!-- Agrega más servicios aquí -->
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 José Manuel Dorantes Méndez. Todos los derechos reservados.</p>
+  <!-- ======= CV ======= -->
+  <section id="cv" class="section cv-section">
+    <div class="container">
+      <h2>CV</h2>
+      <p>Puedes descargar mi CV actualizado aquí:</p>
+      <a href="Mi_CV.pdf" download class="btn-primary">Descargar CV</a>
+    </div>
+  </section>
+
+  <!-- ======= CONTACTO ======= -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2>Contacto</h2>
+      <form class="contact-form" autocomplete="off">
+        <input type="text" placeholder="Tu nombre" required/>
+        <input type="email" placeholder="Tu email" required/>
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button type="submit" class="btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Manuel Dorantes. Todos los derechos reservados.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
