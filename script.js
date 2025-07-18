@@ -1,3 +1,30 @@
+// Modal para imágenes de proyectos
+
+// document.querySelectorAll('.project-card img').forEach(img => {
+  // img.style.cursor = 'pointer';
+  // img.addEventListener('click', function() {
+    // const modal = document.getElementById('projectImgModal');
+    // const modalImg = document.getElementById('imgModalContent');
+    // modal.style.display = 'flex';
+    // modalImg.src = img.src;
+    // modalImg.alt = img.alt;
+    // document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+  // });
+// });
+
+// Hover de cars en de proyectos
+document.querySelector('.close-modal').onclick = function() {
+  document.getElementById('projectImgModal').style.display = 'none';
+  document.body.style.overflow = ''; 
+};
+document.getElementById('projectImgModal').onclick = function(e) {
+  if (e.target === this) {
+    this.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+};
+
+
 // Animación de barra de skills al hacer scroll
 document.addEventListener('DOMContentLoaded', function () {
   // Animar skills
@@ -62,20 +89,23 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+
 // Copiar email al portapapeles
-<script>
 document.addEventListener("DOMContentLoaded", function() {
+  // ... tu código de animación y navegación ...
+
+  // Copiar email al portapapeles
   const copyBtn = document.getElementById("copyEmailBtn");
   const copyMsg = document.getElementById("copyMsg");
+
   if (copyBtn && copyMsg) {
-    copyBtn.addEventListener("click", function() {
+    copyBtn.addEventListener("click", function () {
       const email = "manuel.dorantes.m@gmail.com";
-      // Copiar al portapapeles
-      navigator.clipboard.writeText(email).then(function() {
-        copyMsg.style.display = "inline";
+      navigator.clipboard.writeText(email).then(function () {
+        copyMsg.style.display = "inline-block";
         setTimeout(() => copyMsg.style.display = "none", 1800);
       });
     });
   }
 });
-</script>

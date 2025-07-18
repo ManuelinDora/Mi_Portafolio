@@ -324,6 +324,7 @@ p { font-size: 1.08em; color: var(--color-text); }
 }
 
 
+
 /* ========== SKILLS MODERNO ========== */
 .skills-section {
   background: linear-gradient(90deg, var(--color-background) 70%, var(--color-accent) 130%);
