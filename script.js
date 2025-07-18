@@ -1,56 +1,36 @@
-// Modal para imágenes de proyectos
+// =========================
+// JS para portafolio MANU
+// =========================
 
-// document.querySelectorAll('.project-card img').forEach(img => {
-  // img.style.cursor = 'pointer';
-  // img.addEventListener('click', function() {
-    // const modal = document.getElementById('projectImgModal');
-    // const modalImg = document.getElementById('imgModalContent');
-    // modal.style.display = 'flex';
-    // modalImg.src = img.src;
-    // modalImg.alt = img.alt;
-    // document.body.style.overflow = 'hidden'; // Evita scroll de fondo
-  // });
-// });
+// --- Menú hamburguesa responsivo ---
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navbar = document.querySelector('.navbar');
 
-// Hover de cars en de proyectos
-document.querySelector('.close-modal').onclick = function() {
-  document.getElementById('projectImgModal').style.display = 'none';
-  document.body.style.overflow = ''; 
-};
-document.getElementById('projectImgModal').onclick = function(e) {
-  if (e.target === this) {
-    this.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-};
-
-
-// Animación de barra de skills al hacer scroll
-document.addEventListener('DOMContentLoaded', function () {
-  // Animar skills
-  const skillBars = document.querySelectorAll('.skill-bar-fill');
-  skillBars.forEach(bar => {
-    const width = bar.getAttribute('style').match(/width:\s*([0-9.]+)%/)[1];
-    bar.style.setProperty('--final-width', width + '%');
-    bar.style.width = '0';
-  });
-
-  function animarSkillsEnVista() {
-    skillBars.forEach(bar => {
-      const rect = bar.getBoundingClientRect();
+  if (navToggle && navbar) {
+    navToggle.addEventListener('click', function () {
+      navbar.classList.toggle('open');
+      // Quitar scroll al abrir menú
+      if (navbar.classList.contains('open')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
+    // Cierra menú al hacer click fuera del navbar en móvil
+    document.addEventListener('click', function (e) {
       if (
-        rect.top < window.innerHeight - 60 &&
-        rect.bottom > 0 &&
-        !bar.classList.contains('animated')
+        navbar.classList.contains('open') &&
+        !navbar.contains(e.target) &&
+        !navToggle.contains(e.target)
       ) {
-        bar.classList.add('animated');
-        bar.style.width = '';
+        navbar.classList.remove('open');
+        document.body.style.overflow = '';
       }
     });
   }
-  window.addEventListener('scroll', animarSkillsEnVista);
-  animarSkillsEnVista();
 
+  // --- Animación de aparición para cards, blog y trayectoria ---
   function animarCards(selector) {
     document.querySelectorAll(selector).forEach(el => {
       const rect = el.getBoundingClientRect();
@@ -71,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', onScrollAnimarCards);
   onScrollAnimarCards();
 
-  // Navegación: resalta sección activa en menú
+  // --- Navegación: resalta sección activa en menú ---
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-links li a");
   window.addEventListener("scroll", () => {
@@ -87,15 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-});
 
-
-
-// Copiar email al portapapeles
-document.addEventListener("DOMContentLoaded", function() {
-  // ... tu código de animación y navegación ...
-
-  // Copiar email al portapapeles
+  // --- Copiar email al portapapeles ---
   const copyBtn = document.getElementById("copyEmailBtn");
   const copyMsg = document.getElementById("copyMsg");
 

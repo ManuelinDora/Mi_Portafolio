@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MANU</title>
-    <!-- Remix Icon CDN -->
+    <title>MANU - Portafolio Web</title>
+    <!-- Iconos Remix -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- Fuente moderna y legible -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fuentes profesionales y legibles -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS (si usas carrusel en el futuro) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,15 +28,18 @@
                 <li><a href="#projects">Proyectos</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#cv-contacto">Contacto</a></li>
-
             </ul>
             <div class="nav-social">
-                <a href="https://github.com/ManuelinDora/" target="_blank" aria-label="GitHub"><i
-                        class="ri-github-line"></i></a>
-                <a href="https://www.linkedin.com/in/manuel-dorantes/" target="_blank" aria-label="LinkedIn"><i
-                        class="ri-linkedin-box-line"></i></a>
+                <a href="https://github.com/ManuelinDora/" target="_blank" aria-label="GitHub"><i class="ri-github-line"></i></a>
+                <a href="https://www.linkedin.com/in/manuel-dorantes/" target="_blank" aria-label="LinkedIn"><i class="ri-linkedin-box-line"></i></a>
                 <a href="documents/Mi_CV.pdf" target="_blank" aria-label="CV"><i class="ri-window-line"></i></a>
             </div>
+            <!-- Botón hamburguesa para móvil -->
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
         </nav>
     </header>
 
@@ -61,63 +66,83 @@
         </div>
     </section>
 
-
     <!--  ***********            Proyectos            ********** -->
     <section id="projects" class="section projects-section">
         <div class="container">
             <h2 class="section-title"><i class="ri-layout-masonry-line"></i> Proyectos </h2>
             <div class="projects-grid">
-                <!-- Card de Proyecto -->
+                <!-- Proyecto 1 -->
                 <div class="project-card">
                     <img src="images/proyecto_1.png" alt="Proyecto 1" />
-                    <h3>eCommerce</h3>
-                    <p>Desarrollé desde cero una tienda en línea de ropa urbana llamada “The King Tiger”, utilizando
-                        tecnologías como HTML, CSS, JavaScript y MySQL.</p>
+                    <h3>eCommerce<br>
+                        "The King Tiger"</h3>
+                    <!-- <div class="tech-badges">
+                        <span><i class="ri-html5-line"></i></span>
+                        <span><i class="ri-css3-line"></i></span>
+                        <span><i class="ri-javascript-line"></i></span>
+                        <span><i class="ri-database-2-line"></i></span>
+                    </div>  -->
+                    <p>Este proyecto fue una colaboración en equipo con desarrolladores backend, frontend y UX/UI para crear una tienda en línea. Aporté en el diseño de interfaz en Figma y en el desarrollo del frontend con HTML, CSS y JavaScript, logrando un sitio responsive, 
+                        visualmente atractivo y con un resultado final de una tienda funcional con identidad urbana sólida.</p>
                     <div class="project-buttons">
                         <a href="https://www.figma.com/design/4sodkEFU5dwZRRQO5QGoqd/FireStack--%7C--e-commerce?node-id=0-1&t=grZEILarUY7QhBFN-1"
                             target="_blank" class="btn-secondary">
-                            <i class="ri-external-link-line"></i> <!-- demo  -->
+                            <i class="ri-external-link-line"></i>
                         </a>
                         <a href="https://github.com/ManuelinDora/E-commerce_Project_The_King_Tiger/tree/Branch_Test"
                             target="_blank" class="btn-secondary btn-github">
-                            <i class="ri-github-line"></i> <!-- código  -->
+                            <i class="ri-github-line"></i>
                         </a>
                     </div>
                 </div>
+                <!-- Proyecto 2 -->
                 <div class="project-card">
                     <img src="images/proyecto_2.png" alt="Proyecto 2" />
-                    <h3>Pagina Web/Blog</h3>
-                    <p>Creé una pagina web/blog sobre tisanas, ofreciendo contenido completo sobre sus propiedades,
-                        preparación y su impacto en el bienestar, diseñado para entusiastas de las infusiones.</p>
+                    <h3>Landing Page <br>
+                        "Tisanas y Bienestar"</h3>
+                    <!--  <div class="tech-badges">
+                        <span><i class="ri-html5-line"></i></span>
+                        <span><i class="ri-css3-line"></i></span>
+                        <span><i class="ri-javascript-line"></i></span>
+                        <span><i class="ri-cloud-line"></i></span>
+                    </div> -->
+                    <p>Este proyecto fue una colaboración en equipo para desarrollar una landing page informativa sobre tisanas. Contribuí en el diseño visual y la implementación con HTML, CSS y JavaScript, logrando un sitio limpio, atractivo y enfocado en la experiencia del usuario.
+                        La página ofrece contenido completo sobre las propiedades, preparación y beneficios de las tisanas.</p>
                     <div class="project-buttons">
                         <a href="https://landingpagetisanas.netlify.app" target="_blank" class="btn-secondary">
-                            <i class="ri-external-link-line"></i> <!-- demo  -->
+                            <i class="ri-external-link-line"></i>
                         </a>
                         <a href="https://github.com/ManuelinDora/Blog_Tisanas" target="_blank"
                             class="btn-secondary btn-github">
-                            <i class="ri-github-line"></i> <!-- código  -->
+                            <i class="ri-github-line"></i>
                         </a>
                     </div>
                 </div>
+                <!-- Proyecto 3 -->
                 <div class="project-card">
                     <img src="images/proyecto_3.png" alt="Proyecto 3" />
-                    <h3>Landing Page</h3>
-                    <p>Desarrollé en equipo una tienda e-commerce de ropa deportiva F1 durante un hackatón contribuyendo
-                        al diseño responsivo y funcionalidades con HTML, CSS y JavaScript.</p>
+                    <h3>Landing Page<br>
+                        "Formula 1"</h3>
+                    <!-- <div class="tech-badges">
+                        <span><i class="ri-html5-line"></i></span>
+                        <span><i class="ri-css3-line"></i></span>
+                        <span><i class="ri-javascript-line"></i></span>
+                    </div> -->
+                    <p>Este proyecto fue una colaboración en equipo durante un hackatón, donde desarrollamos una landing page e-commerce de ropa deportiva inspirada en la F1.
+                        Contribuí al diseño responsivo y a la implementación de funcionalidades con HTML, CSS y JavaScript, logrando una interfaz atractiva y funcional orientada a la experiencia del usuario.</p>
                     <div class="project-buttons">
                         <a href="https://landingpageformula.netlify.app/" target="_blank" class="btn-secondary">
-                            <i class="ri-external-link-line"></i> <!-- demo  -->
+                            <i class="ri-external-link-line"></i>
                         </a>
                         <a href="https://github.com/ManuelinDora/Pagina_F1.git" target="_blank"
                             class="btn-secondary btn-github">
-                            <i class="ri-github-line"></i> <!-- código  -->
+                            <i class="ri-github-line"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!--       ***********    Habilidades  ************** -->
     <section id="skills" class="section skills-section">
@@ -127,103 +152,47 @@
                 <!-- Columna Izquierda -->
                 <div class="skills-list">
                     <div class="skill">
-                        <span>
-                            <img src="images/figma_logo.png" alt="UX/UI" class="skill-icon-svg">
-                            Figma
-                        </span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 90%;"></div>
-                        </div>
+                        <img src="images/figma_logo.png" alt="Figma" class="skill-icon-svg skill-float">
+                        <span>Figma</span>
                     </div>
-
                     <div class="skill">
-                        <span>
-                            <img src="images/html_logo.png" alt="HTML" class="skill-icon-svg small-icon">
-                            HTML
-                        </span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 85%;"></div>
-                        </div>
+                        <img src="images/html_logo.png" alt="HTML" class="skill-icon-svg skill-float">
+                        <span>HTML</span>
                     </div>
-
                     <div class="skill">
-                        <span>
-                            <img src="images/css_logo.png" alt="CSS" class="skill-icon-svg small-icon">
-                            CSS
-                        </span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 75%;"></div>
-                        </div>
+                        <img src="images/css_logo.png" alt="CSS" class="skill-icon-svg skill-float">
+                        <span>CSS</span>
                     </div>
-
-
                     <div class="skill">
-                        <span>
-                            <img src="images/javascript_logo.png" alt="JavaScript" class="skill-icon-svg">
-                            JavaScript
-                        </span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 75%;"></div>
-                        </div>
+                        <img src="images/javascript_logo.png" alt="JavaScript" class="skill-icon-svg skill-float">
+                        <span>JavaScript</span>
                     </div>
-
                     <div class="skill">
-                        <span>
-                            <img src="images/github_logo.png" alt="GitHub" class="skill-icon-svg">
-                            GitHub
-                        </span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 85%;"></div>
-                        </div>
+                        <img src="images/github_logo.png" alt="GitHub" class="skill-icon-svg skill-float">
+                        <span>GitHub</span>
                     </div>
                 </div>
                 <!-- Columna Derecha -->
                 <div class="skills-list">
                     <div class="skill">
-                        <span>
-                            <img src="images/java_logo.png" alt="Java" class="skill-icon-svg">
-                            Java
-                        </span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 60%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <span>
-                            <img src="images/python_logo.png" alt="Python" class="skill-icon-svg">
-                            Python
-                        </span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 50%;"></div>
-                        </div>
+                        <img src="images/java_logo.png" alt="Java" class="skill-icon-svg skill-float">
+                        <span>Java</span>
                     </div>
                     <div class="skill">
-                        <span>
-                            <img src="images/mysql_logo.png" alt="MySQL" class="skill-icon-svg">
-                            MySQL
-                        </span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 35%;"></div>
-                        </div>
+                        <img src="images/python_logo.png" alt="Python" class="skill-icon-svg skill-float">
+                        <span>Python</span>
                     </div>
                     <div class="skill">
-                        <span>
-                            <img src="images/nodejs_logo.png" alt="Node.js" class="skill-icon-svg">
-                            Node.js
-                        </span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 35%;"></div>
-                        </div>
+                        <img src="images/mysql_logo.png" alt="MySQL" class="skill-icon-svg skill-float">
+                        <span>MySQL</span>
                     </div>
                     <div class="skill">
-                        <span>
-                            <img src="images/aws_logo.png" alt="AWS" class="skill-icon-svg">
-                            AWS
-                        </span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 35%;"></div>
-                        </div>
+                        <img src="images/nodejs_logo.png" alt="Node.js" class="skill-icon-svg skill-float">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill">
+                        <img src="images/aws_logo.png" alt="AWS" class="skill-icon-svg skill-float">
+                        <span>AWS</span>
                     </div>
                 </div>
             </div>
@@ -280,15 +249,15 @@
                     <h3><i class="ri-graduation-cap-line"></i> Trayectoria Académica</h3>
                     <ul>
                         <li>
-                            <span class="trayectoria-carrera">Desarrolador Java FullStack</span>
+                            <span class="trayectoria-carrera">Desarrollador Java FullStack</span>
                             <span class="trayectoria-escuela">Generation México | Mayo 2025 - Agosto 2025</span>
                         </li>
                         <li>
-                            <span class="trayectoria-carrera">Introduccion a Java</span>
+                            <span class="trayectoria-carrera">Introducción a Java</span>
                             <span class="trayectoria-escuela">Fundaula España | Junio 2025 - Julio 2025</span>
                         </li>
                         <li>
-                            <span class="trayectoria-carrera">Ingeniera en Comunicaciones y Electronica</span>
+                            <span class="trayectoria-carrera">Ingeniería en Comunicaciones y Electrónica</span>
                             <span class="trayectoria-escuela">Esime Zacatenco - IPN | Agosto 2010 - Junio 2012</span>
                         </li>
                         <li>
@@ -298,7 +267,7 @@
                                 2010</span>
                         </li>
                         <li>
-                            <span class="trayectoria-carrera">Instalacion y Soporte a Redes alambricas e Inalambricas
+                            <span class="trayectoria-carrera">Instalación y Soporte a Redes Alámbricas e Inalámbricas
                                 Industrial</span>
                             <span class="trayectoria-escuela">CICAP | Febrero 2016 - Marzo 2016</span>
                         </li>
@@ -348,18 +317,18 @@
         <div class="container cv-contact-flex">
             <!-- Bloque CV -->
             <div class="cv-block">
-                <h2>CV</h2>
-                <p>
-                    Descarga mi currículum <br>
-                    <i class="ri-arrow-down-circle-line"></i>
-                </p>
+                <h2>Consulta mi currículum</h2>
+                <!-- <p>
+                    Consulta mi currículum <br>
+                    <i class="ri-arrow-down-circle-line"></i> 
+                </p> -->
                 <a href="documents/Mi_CV.pdf" download class="btn-primary btn-cv" aria-label="Descargar CV">
-                    <i class="ri-article-line"></i> Descargar CV
+                    <i class="ri-article-line"></i> Descargar mi CV
                 </a>
             </div>
             <!-- Bloque Contacto -->
             <div class="contact-block">
-                <h2 class="section-title"><i class="ri-phone-fill"></i> Contacto </h2>
+                <h2 class="section-title"><i class="ri-phone-fill"></i> Contacto</h2>
                 <p>No se trata solo de páginas bonitas, sino de soluciones que conecten con las personas. <br>
                     <br>
                     Escríbeme y construyamos algo útil y memorable.
@@ -397,7 +366,8 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <!-- Swiper JS (si usas carrusel en el futuro) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
-
 
 </html>
