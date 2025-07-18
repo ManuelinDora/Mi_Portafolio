@@ -486,32 +486,25 @@ p { font-size: 1.08em; color: var(--color-text); }
 }
 
 /* ----------------- SKILLS MODERNO SIN BARRAS ----------------- */
-.skills-section {
-  background: linear-gradient(90deg, var(--color-background, #f3fff2) 70%, var(--color-accent, #e6ddfc) 130%);
-  padding: 2.5em 0 2em 0;
+
+/* ========== HABILIDADES EN GRID (2 FILAS X 5 COLUMNAS) ========== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2.2em 3em;
+  justify-items: center;
+  align-items: start;
+  padding: 1.5em 0 1.5em 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.skills-columns {
-  display: flex;
-  gap: 5em;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  width: 100%;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.skills-list {
+.skill {
   display: flex;
   flex-direction: column;
-  gap: 2em;
   align-items: center;
-  width: 100%;
-  min-width: 180px;
-  max-width: 240px;
+  justify-content: flex-start;
 }
 
 /* Iconos de habilidad con efecto flotante y bounce */
@@ -558,8 +551,6 @@ p { font-size: 1.08em; color: var(--color-text); }
   0%, 100% { transform: translateY(0) translateX(0);}
   50% { transform: translateY(-8px) translateX(-6px);}
 }
-
-/* Bounce en hover/click */
 @keyframes skill-bounce {
   0% { transform: scale(1) translateY(0) translateX(0);}
   20% { transform: scale(1.05) translateY(-14px) translateX(-12px);}
@@ -569,60 +560,53 @@ p { font-size: 1.08em; color: var(--color-text); }
   100% { transform: scale(1) translateY(0) translateX(0);}
 }
 
-/* ----------- RESPONSIVE SKILLS ----------- */
+/* ----------- RESPONSIVE ----------- */
 @media (max-width: 900px) {
-  .skills-columns {
-    gap: 2em;
-    max-width: 99vw;
-  }
-  .skills-list {
-    min-width: 120px;
-    max-width: 180px;
-    gap: 1.2em;
+  .skills-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.1em 1.1em;
+    padding: 1em 0;
   }
   .skill-icon-svg.skill-float {
-    width: 54px;
-    height: 54px;
+    width: 56px;
+    height: 56px;
     border-radius: 14px;
-    box-shadow: 0 2px 18px #b388eb33, 0 0 0 6px #ece0fa;
   }
   .skill span {
     font-size: 1em;
     margin-top: 0.2em;
   }
 }
-
-@media (max-width: 600px) {
-  .skills-columns {
-    flex-direction: column;
-    gap: 0.6em;
-    align-items: center;
+@media (max-width: 650px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 1.2em 1em;
+    padding: 0.8em 0;
     max-width: 99vw;
-  }
-  .skills-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: center;
-    min-width: 0;
-    max-width: 99vw;
-    margin-bottom: 0.3em;
-  }
-  .skill {
-    flex-direction: column;
-    margin-bottom: 0.2em;
   }
   .skill-icon-svg.skill-float {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    box-shadow: 0 1px 12px #b388eb22, 0 0 0 4px #ece0fa;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
   }
   .skill span {
     font-size: 0.92em;
     margin-top: 0.12em;
   }
 }
+@media (max-width: 430px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto);
+    gap: 0.8em 0.2em;
+  }
+  .skill-icon-svg.skill-float {
+    width: 38px;
+    height: 38px;
+  }
+}
+
 
 /* ----------------- TRAYECTORIA ----------------- */
 .trayectoria-section {
