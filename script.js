@@ -1,6 +1,3 @@
-// =========================
-// JS para portafolio MANU
-// =========================
 
 // --- Menú hamburguesa responsivo ---
 document.addEventListener("DOMContentLoaded", function () {
