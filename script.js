@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.overflow = 'hidden';
       } else {
         document.body.style.overflow = '';
-      }
+      } 
     });
     // Cierra menú al hacer click fuera del navbar en móvil
     document.addEventListener('click', function (e) {
